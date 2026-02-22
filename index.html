@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Executive IT Portfolio</title>
+    <style>
+      :root {
+        --bg: #0b0b0b;
+        --surface: #151515;
+        --text: #f2f2f2;
+        --muted: #b5b5b5;
+        --line: #2a2a2a;
+        --accent: #dcdcdc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: linear-gradient(180deg, #070707 0%, var(--bg) 100%);
+      }
+
+      main {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 3rem 1.2rem;
+      }
+
+      .container {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 2rem;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+      }
+
+      h1,
+      h2 {
+        margin: 0 0 0.8rem;
+        letter-spacing: 0.01em;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 4vw, 2.8rem);
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        margin-top: 1.8rem;
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.7;
+        color: #e0e0e0;
+      }
+
+      .intro {
+        color: var(--muted);
+        margin-bottom: 1.4rem;
+      }
+
+      .focus-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1rem;
+      }
+
+      .focus-item {
+        border: 1px solid #3a3a3a;
+        border-radius: 999px;
+        padding: 0.45rem 0.85rem;
+        font-size: 0.9rem;
+        color: #d6d6d6;
+      }
+
+      .contact {
+        margin-top: 2rem;
+        padding-top: 1.4rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .contact-btn {
+        display: inline-block;
+        margin-top: 0.9rem;
+        text-decoration: none;
+        background: var(--accent);
+        color: #0f0f0f;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 0.8rem 1.25rem;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      .contact-btn:hover {
+        opacity: 0.92;
+        transform: translateY(-1px);
+      }
+
+      footer {
+        margin-top: 2rem;
+        color: #818181;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 560px) {
+        .container {
+          padding: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <h1>Executive IT Professional</h1>
+        <p class="intro">
+          Experienced technology leader with nearly a decade of delivery across security, decentralized systems,
+          and strategic digital initiatives.
+        </p>
+
+        <h2>Core Expertise</h2>
+        <p>
+          I work with organizations and founders to plan, secure, and deliver critical technology outcomes with
+          clear direction and strong execution.
+        </p>
+        <div class="focus-list" aria-label="Core expertise">
+          <span class="focus-item">Blockchain Development</span>
+          <span class="focus-item">Web3 Consulting</span>
+          <span class="focus-item">Cybersecurity &amp; Information Security</span>
+        </div>
+
+        <h2>Approach</h2>
+        <p>
+          My focus is practical leadership: building resilient systems, reducing risk, and creating solutions that
+          support long-term business goals.
+        </p>
+
+        <div class="contact" id="contact">
+          <h2>Contact</h2>
+          <p>For consulting, advisory, or project opportunities, please get in touch.</p>
+          <a class="contact-btn" href="mailto:me@domain.com">Contact Me</a>
+        </div>
+
+        <footer>© <span id="year"></span> Executive IT Portfolio</footer>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
